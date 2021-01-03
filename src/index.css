@@ -1,8 +1,6 @@
 /* @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"); */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "assets/main.css";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
 
 .cursive {
@@ -18,4 +16,9 @@
 
 .home-name {
   font-size: 150px;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(90deg, #011761 0%, #860c35 100%);
 }
