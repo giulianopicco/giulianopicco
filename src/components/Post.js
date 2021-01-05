@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import image from "../bg-cosmos.jpg";
 
 const Post = () => {
   const [posts, setPosts] = useState(null);
@@ -25,7 +26,7 @@ const Post = () => {
   }, []);
 
   return (
-    <main className="bg-green-100 min-h-screen p-12 mt-20">
+    <main className="bg-gray-200 min-h-screen p-12 mt-28">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive">
           Blog Posts Page

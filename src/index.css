@@ -15,10 +15,59 @@
 }
 
 .home-name {
-  font-size: 150px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-name {
+    font-size: 30px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home-name {
+    font-size: 60px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home-name {
+    font-size: 100px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .home-name {
+    font-size: 100px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .home-name {
+    font-size: 120px;
+  }
+}
+
+:root {
+  --color1: #011761;
+  --color2: #860c35;
 }
 
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  background: linear-gradient(90deg, #011761 0%, #860c35 100%);
+  background: linear-gradient(90deg, var(--color1) 0%, var(--color2) 100%);
+}
+body {
+  background: rgba(3, 3, 3);
+}
+
+.bg-color1 {
+  background: var(--color1);
+}
+.bg-color2 {
+  background: var(--color2);
 }
