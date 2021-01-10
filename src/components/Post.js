@@ -26,7 +26,7 @@ const Post = () => {
   }, []);
 
   return (
-    <main className="bg-gray-200 min-h-screen p-12 mt-28">
+    <main className="bg-indigo-200 min-h-screen p-12 lg:mt-28">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive">
           Blog Posts Page
@@ -40,7 +40,7 @@ const Post = () => {
               <article>
                 <Link to={`/post/${post.slug.current}`} key={post.slug.current}>
                   <span
-                    className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400"
+                    className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-indigo-500"
                     key={index}
                   >
                     <img
@@ -48,8 +48,8 @@ const Post = () => {
                       alt={post.mainImage.alt}
                       className="w-full h-full rounded-r object-cover absolute"
                     />
-                    <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
-                      <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded">
+                    <span className="relative h-full flex justify-end items-end pr-4 pb-4">
+                      <h3 className="text-lg font-blog px-3 py-4 bg-pink-700 text-red-100 bg-opacity-75 rounded">
                         {post.title}
                       </h3>
                     </span>

@@ -71,3 +71,10 @@ body {
 .bg-color2 {
   background: var(--color2);
 }
+
+.text-color1 {
+  color: var(--color1);
+}
+.text-color2 {
+  color: var(--color2);
+}

@@ -22,17 +22,20 @@ const Project = () => {
   }, []);
 
   return (
-    <main className="bg-green-100 min-h-screen p-12">
+    <main className="bg-indigo-200 min-h-screen px-3 pt-12 lg:p-12 lg:mt-28">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive"> My Projects</h1>
+        <h1 className="text-5xl flex justify-center cursive text-color1">
+          {" "}
+          My Projects
+        </h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my projects page!
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="grid lg:grid-cols-2 gap-8">
           {projects &&
             projects.map((project, index) => (
               <article className="relative rounded-lg shadow-xl bg-white p-16">
-                <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
+                <h3 className="text-color1 text-3xl font-bold mb-2 hover:text-red-700">
                   <a href={project.link} alt={project.title} target="_blank">
                     {project.title}
                   </a>
@@ -60,7 +63,7 @@ const Project = () => {
                     href={project.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="text-red-500 font-bold hover:underline text hover:tet-red-400 text-xl"
+                    className="text-color2 font-bold hover:underline text hover:tet-red-400 text-xl"
                   >
                     View the project&nbsp;
                     <span role="img" aria-label="right pointer">

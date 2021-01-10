@@ -1,6 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 import image from "../bg-cosmos.jpg";
 import imgProfile from "../assets/profilecolorpng.png";
+import svgWeb from "../assets/programming.svg";
+import svgMobile from "../assets/mobilepink.svg";
+import svgScrumBoard from "../assets/scrum_pink.svg";
 
 import { motion } from "framer-motion";
 import TypeIt from "typeit-react";
@@ -29,7 +34,7 @@ const Home = () => {
 
         <div className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8">
           <TypeIt
-            className="text-6x text-green-100 font-bold cursive leading none lg:leading snug home-name"
+            className="text-6x text-gray-100 font-bold cursive leading none lg:leading snug home-name"
             getBeforeInit={(instance) => {
               instance
                 .pause(1500)
@@ -79,8 +84,156 @@ const Home = () => {
           </svg>
         </div>
       </section>
-      <section className="relative h-screen bg-color1 z-50">hola</section>
-      <section className="bg-blue-600">
+      {/* <section className="relative h-screen bg-color1 z-30"> */}
+      <section class="relative z-30 bg-color1 py-8">
+        <div class="container max-w-5xl mx-auto m-8">
+          <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
+            Full Stack Web & Mobile Developer
+          </h1>
+          <div class="w-full mb-4">
+            <div class="h-1 mx-auto bg-gray-200 w-64 opacity-50 my-0 py-0 rounded-t"></div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-6">
+              <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
+                Fontend & Backend Technologies
+              </h3>
+              <p class="text-gray-300 mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                at ipsum eu nunc commodo posuere et sit amet ligula.
+                <br />
+                <br />
+              </p>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+              <img src={svgWeb} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
+            </div>
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+              <div class="align-middle">
+                <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
+                  Mobile Devepment
+                </h3>
+                <p class="text-gray-300 mb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  <br />
+                  <br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-6">
+              <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
+                Agile methodologies
+              </h3>
+              <p class="text-gray-300 mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                at ipsum eu nunc commodo posuere et sit amet ligula.
+                <br />
+                <br />
+              </p>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+              <img src={svgScrumBoard} alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative z-30 bg-color1 py-8">
+        <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+          {/* <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
+            Title
+          </h1>
+          <div class="w-full mb-4">
+            <div class="h-1 mx-auto bg-indigo-50 w-64 opacity-50 my-0 py-0 rounded-t"></div>
+          </div> */}
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                class="flex flex-wrap no-underline hover:no-underline"
+              >
+                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                  Personal Blogs.
+                </div>
+                <p class="text-gray-200 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+              </a>
+            </div>
+            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="flex items-center justify-start">
+                <Link to={`/post/`}>
+                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    See more
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                class="flex flex-wrap no-underline hover:no-underline"
+              >
+                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                  Projects.
+                </div>
+                <p class="text-gray-200 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+              </a>
+            </div>
+            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="flex items-center justify-center">
+                <Link to={`/project/`}>
+                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    See more
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                class="flex flex-wrap no-underline hover:no-underline"
+              >
+                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                  About me.
+                </div>
+                <p class="text-gray-200 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+              </a>
+            </div>
+            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="flex items-center justify-end">
+                <Link to={`/about/`}>
+                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    See more
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section className="gradient">
         <svg class="wave-top" viewBox="0 0 1439 147" version="1.1">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
@@ -106,20 +259,38 @@ const Home = () => {
             </g>
           </g>
         </svg>
-        <section class="container mx-auto text-center py-6 mb-12">
+        <section class="container mx-auto text-center py-6">
           <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-            Call to Action
+            Contact Form
           </h1>
           <div class="w-full mb-4">
             <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
-          <h3 class="my-4 text-3xl leading-tight">
+          <h3 class="my-4 text-3xl text-white leading-tight">
             Main Hero Message to sell yourself!
           </h3>
           <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Action!
           </button>
         </section>
+        <div className="flex align-middle justify-center">
+          <div className="inline-flex py-3 px-3 my-6">
+            <SocialIcon
+              url="https://github.com/giulianopicco"
+              className="mr-4"
+              target="_blank"
+              fgColor="#fff"
+              style={{ height: 45, width: 45 }}
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/in/max-giuliano-picco-432572171/"
+              className="mr-4"
+              target="_blank"
+              fgColor="#fff"
+              style={{ height: 45, width: 45 }}
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
