@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import classes from "./NavBar.module.css";
+
+import logo from "../assets/logo-white.svg";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,9 +34,6 @@ const NavBar = () => {
 
   const navMenuDiv = useRef();
   const navMenu = useRef();
-
-  console.log(navMenuDiv);
-  console.log(navMenu);
 
   document.onclick = check;
   function check(e) {
@@ -78,7 +78,7 @@ const NavBar = () => {
             activeClassName="text-white"
             className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           >
-            MAX
+            <img src={logo} alt="logo" className={classes.logo} width="80" />
           </NavLink>
         </div>
         <div className="block lg:hidden pr-4">
