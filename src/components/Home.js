@@ -361,7 +361,7 @@ const Home = () => {
                 <img src={svgEmail} alt="" srcset="" />
               </div>
             </div>
-            <div class="">
+            <form method="POST" data-netlify="true">
               <div>
                 <span class="uppercase text-sm text-gray-300 font-bold">
                   Full Name
@@ -369,6 +369,7 @@ const Home = () => {
                 <input
                   class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="text"
+                  name="name"
                   placeholder=""
                 />
               </div>
@@ -378,24 +379,34 @@ const Home = () => {
                 </span>
                 <input
                   class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                  type="text"
+                  type="email"
+                  name="email"
                 />
               </div>
               <div class="mt-8">
                 <span class="uppercase text-sm text-gray-300 font-bold">
                   Message
                 </span>
-                <textarea class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                <textarea
+                  name="message"
+                  class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                ></textarea>
+              </div>
+              <div class="mt-8">
+                <div data-netlify-recaptcha="true"></div>
               </div>
               <div class="mt-8">
                 {/* <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                   Send Message
                 </button> */}
-                <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button
+                  type="submit"
+                  class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                >
                   Send Message!
                 </button>
               </div>
-            </div>
+            </form>
           </div>
 
           {/* <h3 class="my-4 text-3xl text-white leading-tight">
