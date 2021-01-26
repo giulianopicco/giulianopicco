@@ -30,30 +30,36 @@ const About = () => {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main className="relative ">
-      <img src={image} alt="cosmos background" className="absolute w-full" />
-      <div className="p-10 lg:pt-48 container mx-auto relative">
-        <section className="bg-indigo-800 rounded-lg shadow-2xl lg:flex p-20">
-          <img
-            src={urlFor(author.authorImage).url()}
-            alt={author.name}
-            className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
-          />
-          <div className="text-lg flex flex-col justify-center">
-            <h1 className="cursive text-6xl text-pink-400 mb-4">
-              Hey there. I'm{" "}
-              <span className="text-pink-100">{author.name}</span>
-            </h1>
-            <div className="prose lg:prose-xl text-white">
-              <BlockContent
-                blocks={author.bio}
-                projectId="wkgbu7ay"
-                dataset="production"
-              />
+    <main>
+      <section className="h-screen relative">
+        <img
+          src={image}
+          alt="cosmos background"
+          className="absolute object-cover w-full h-full"
+        />
+        <div className="p-3 pt-16 lg:p-14 lg:pt-48 container mx-auto relative">
+          <section className="bg-indigo-800 rounded-lg shadow-2xl lg:flex p-8 lg:p-20">
+            <img
+              src={urlFor(author.authorImage).url()}
+              alt={author.name}
+              className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
+            />
+            <div className="text-lg flex flex-col justify-center">
+              <h1 className="cursive text-3xl lg:text-6xl text-pink-400 mb-4">
+                Hey there. I'm{" "}
+                <span className="text-pink-100">{author.name}</span>
+              </h1>
+              <div className="prose lg:prose-xl text-white">
+                <BlockContent
+                  blocks={author.bio}
+                  projectId="wkgbu7ay"
+                  dataset="production"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      </section>
     </main>
   );
 };

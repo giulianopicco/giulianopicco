@@ -37,12 +37,12 @@ const SinglePost = () => {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <main className="bg-indigo-200 min-h-screen px-3 pt-12 lg:p-12 lg:mt-28">
-      <article className="container shadow-lg mx-auto bg-indigo-300 rounded-lg">
+    <main className="bg-color1 min-h-screen px-4 pt-4 lg:p-12 mt-14 lg:mt-28">
+      <article className="container shadow-lg mx-auto bg-indigo-900 rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full items-center justify-center p-3 lg:p-8">
             <div className="bg-pink-200 bg-opacity-75 rounded p-3 lg:p-12">
-              <h1 class="cursive text-3xl lg:text-6xl mb-4">
+              <h1 class="cursive text-3xl lg:text-5xl mb-4">
                 {singlePost.title}
               </h1>
               <div className="flex justify-center text-gray-800">
@@ -64,7 +64,7 @@ const SinglePost = () => {
             style={{ height: "400px" }}
           />
         </header>
-        <div className="px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-gray-200">
           <BlockContent
             blocks={singlePost.body}
             projectId="wkgbu7ay"

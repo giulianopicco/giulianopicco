@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import image from "../bg-cosmos.jpg";
@@ -6,12 +6,19 @@ import imgProfile from "../assets/profilecolorpng.png";
 import svgWeb from "../assets/programming.svg";
 import svgMobile from "../assets/mobilepink.svg";
 import svgScrumBoard from "../assets/scrum_pink.svg";
+import svgEmail from "../assets/email.svg";
 
 import { motion } from "framer-motion";
 import TypeIt from "typeit-react";
 import classes from "./Home.module.scss";
 
 const Home = () => {
+  const contactForm = useRef();
+
+  const scrollToContactForm = () => {
+    window.scrollTo(contactForm.current);
+  };
+
   return (
     <main>
       <section className="h-screen relative">
@@ -32,7 +39,7 @@ const Home = () => {
           className="absolute object-cover w-96 h-96 xl:w-auto xl:h-auto bottom-0 right-0"
         />
 
-        <div className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8">
+        <div className="relative flex flex-col items-center justify-content-center min-h-screen pt-12 lg:pt-64 px-8">
           <TypeIt
             className="text-6x text-gray-100 font-bold cursive leading none lg:leading snug home-name"
             getBeforeInit={(instance) => {
@@ -47,7 +54,64 @@ const Home = () => {
               return instance;
             }}
           />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4 }}
+            className={classes.scrollDiv}
+          >
+            <svg
+              className={classes.scroll}
+              width="40"
+              height="77"
+              viewBox="0 0 40 77"
+              style={{ transform: "translate(0px, 0px)", opacity: 1 }}
+            >
+              <g id="scroll" transform="translate(-253 -787)">
+                <g
+                  id="Rectangle_12"
+                  data-name="Rectangle 12"
+                  transform="translate(253 787)"
+                  fill="rgba(0,0,0,0.4)"
+                  stroke="#fff"
+                  stroke-width="4"
+                >
+                  <rect width="40" height="77" rx="20" stroke="none"></rect>
+                  <rect
+                    x="2"
+                    y="2"
+                    width="36"
+                    height="73"
+                    rx="18"
+                    fill="none"
+                  ></rect>
+                </g>
+                <circle
+                  class="circle"
+                  id="Ellipse_1"
+                  data-name="Ellipse 1"
+                  cx="11"
+                  cy="11"
+                  r="11"
+                  transform="translate(262 798)"
+                  fill="#fff"
+                >
+                  <animateTransform
+                    id="letter-a"
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    dur="2s"
+                    values="262,798;262,832;262,798"
+                    calcMode="linear"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </g>
+            </svg>
+          </motion.div>
         </div>
+
         {/* <div class="sticky bottom-0 -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
         {/* <div class="relative -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
         <div class="absolute bottom-0 w-full">
@@ -87,7 +151,7 @@ const Home = () => {
       {/* <section className="relative h-screen bg-color1 z-30"> */}
       <section class="relative z-30 bg-color1 py-8">
         <div class="container max-w-5xl mx-auto m-8">
-          <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
+          <h1 class="w-full my-2 text-3xl lg:text-5xl font-bold leading-tight text-center text-gray-200">
             Full Stack Web & Mobile Developer
           </h1>
           <div class="w-full mb-4">
@@ -95,32 +159,49 @@ const Home = () => {
           </div>
           <div class="flex flex-wrap">
             <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
-                Fontend & Backend Technologies
+              <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12">
+                Frontend & Backend Technologies
               </h3>
-              <p class="text-gray-300 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+              <p class="text-gray-300">
+                <ul>
+                  <li>Good taste on UI & UX affairs</li>
+                  <li>JS frameworks (Angular, React)</li>
+                  <li>Headless CMS, JAM Stack.</li>
+                  <li>API design and development of RESTful Services.</li>
+                  <li>Django, Node JS, and PHP.</li>
+                </ul>
                 <br />
                 <br />
               </p>
             </div>
             <div class="w-full sm:w-1/2 p-6">
-              <img src={svgWeb} alt="" srcset="" />
+              <img
+                src={svgWeb}
+                className="w-5/6 sm:h-64 mx-auto"
+                alt=""
+                srcset=""
+              />
             </div>
           </div>
           <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-            <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
               <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
             </div>
-            <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
               <div class="align-middle">
-                <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
-                  Mobile Devepment
+                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
+                  Mobile Development
                 </h3>
-                <p class="text-gray-300 mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                <p class="text-gray-300">
+                  <ul>
+                    <li>Native Android experience.</li>
+                    <li>
+                      Mobile hybrid Development (Ionic, React Native, Flutter).
+                    </li>
+                    <li>
+                      SOLID principles, mobile design patterns (MVVM, BLoC).
+                    </li>
+                  </ul>
                   <br />
                   <br />
                 </p>
@@ -128,18 +209,22 @@ const Home = () => {
             </div>
           </div>
           <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 class="text-3xl text-gray-200 font-bold leading-none mb-3">
+            <div class="w-5/6 sm:w-1/2 p-6 lg:mt-6">
+              <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
                 Agile methodologies
               </h3>
-              <p class="text-gray-300 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+              <p class="text-gray-300">
+                <ul>
+                  <li>SCRUM</li>
+                  <li>Kanban</li>
+                  <li>Jira</li>
+                  <li>PROficient Git user</li>
+                </ul>
                 <br />
                 <br />
               </p>
             </div>
-            <div class="w-full sm:w-1/2 p-6">
+            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
               <img src={svgScrumBoard} alt="" srcset="" />
             </div>
           </div>
@@ -147,15 +232,15 @@ const Home = () => {
       </section>
 
       <section class="relative z-30 bg-color1 py-8">
-        <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <div class="container mx-auto flex flex-wrap lg:flex-nowrap pt-4 pb-12 px-8 xl:px-32 gap-10">
           {/* <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
             Title
           </h1>
           <div class="w-full mb-4">
             <div class="h-1 mx-auto bg-indigo-50 w-64 opacity-50 my-0 py-0 rounded-t"></div>
           </div> */}
-          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+            <div class="flex-1 no-outline rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
@@ -164,23 +249,22 @@ const Home = () => {
                   Personal Blogs.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Here I post some articles about the tech Industry.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="flex items-center justify-start">
+            <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden p-6">
+              <div class="flex items-center justify-center lg:justify-start">
                 <Link to={`/post/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
@@ -189,23 +273,22 @@ const Home = () => {
                   Projects.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Here you can see my personal porfolio.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
               <div class="flex items-center justify-center">
                 <Link to={`/project/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-indigo-900 rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
@@ -214,15 +297,14 @@ const Home = () => {
                   About me.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  If you want to know a bit more about me and get in touch.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto bg-indigo-900 rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="flex items-center justify-end">
+            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
+              <div class="flex items-center justify-center lg:justify-end">
                 <Link to={`/about/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
@@ -259,19 +341,66 @@ const Home = () => {
             </g>
           </g>
         </svg>
-        <section class="container mx-auto text-center py-6">
-          <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        <section ref={contactForm} class="container mx-auto text-center py-6">
+          {/* <h1 class="w-full my-2 text-4xl lg:text-5xl font-bold leading-tight text-center text-white">
             Contact Form
           </h1>
+
           <div class="w-full mb-4">
             <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+          </div> */}
+
+          <div class="max-w-screen-xl mt-20 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-6 md:mx-auto bg-glass-color1 text-gray-200 rounded-lg shadow-lg">
+            <div class="flex flex-col justify-between">
+              <div>
+                <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+                  Let's talk about everything!
+                </h2>
+              </div>
+              <div class="mt-6 text-center p-6">
+                <img src={svgEmail} alt="" srcset="" />
+              </div>
+            </div>
+            <div class="">
+              <div>
+                <span class="uppercase text-sm text-gray-300 font-bold">
+                  Full Name
+                </span>
+                <input
+                  class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+              <div class="mt-8">
+                <span class="uppercase text-sm text-gray-300 font-bold">
+                  Email
+                </span>
+                <input
+                  class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="text"
+                />
+              </div>
+              <div class="mt-8">
+                <span class="uppercase text-sm text-gray-300 font-bold">
+                  Message
+                </span>
+                <textarea class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              </div>
+              <div class="mt-8">
+                {/* <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                  Send Message
+                </button> */}
+                <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  Send Message!
+                </button>
+              </div>
+            </div>
           </div>
-          <h3 class="my-4 text-3xl text-white leading-tight">
+
+          {/* <h3 class="my-4 text-3xl text-white leading-tight">
             Main Hero Message to sell yourself!
-          </h3>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            Action!
-          </button>
+          </h3> */}
         </section>
         <div className="flex align-middle justify-center">
           <div className="inline-flex py-3 px-3 my-6">

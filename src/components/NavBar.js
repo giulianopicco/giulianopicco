@@ -52,6 +52,7 @@ const NavBar = () => {
       } else {
         // click both outside link and outside menu, hide menu
         navMenuDiv.current.classList.add("hidden");
+        navMenu.current.childNodes[0].classList.remove(classes.open);
       }
     }
   }
@@ -64,6 +65,19 @@ const NavBar = () => {
     }
     return false;
   }
+
+  useEffect(() => {
+    navMenu.current.addEventListener("click", (evt) => {
+      // $(this).toggleClass("open");
+      let menuIcon = evt.target;
+      if (evt.target.tagName.toLowerCase() === "span") {
+        menuIcon = menuIcon.parentNode;
+      } else if (evt.target.tagName.toLowerCase() === "button") {
+        menuIcon = menuIcon.childNodes[0];
+      }
+      menuIcon.classList.toggle(classes.open);
+    });
+  }, []);
 
   return (
     <nav
@@ -87,18 +101,24 @@ const NavBar = () => {
             ref={navMenu}
             className={!scrolled ? navBarDrawer : navBarDrawerScrolled}
           >
-            <svg
+            {/* <svg
               className="fill-current h-6 w-6"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
+            </svg> */}
+            <div className={classes.nav_icon1}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
         </div>
         <div
-          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-white p-4 lg:p-0 z-20"
+          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-center text-white p-4 lg:p-0 z-20"
           id="nav-content"
           ref={navMenuDiv}
         >
@@ -111,29 +131,29 @@ const NavBar = () => {
                 Active
               </a>
             </li> */}
-            <li className="mr-3">
+            <li className="lg:mr-3">
               <NavLink
                 to="/post"
                 activeClassName="text-red-100 bg-pink-700"
-                className="inline-flex items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 Blog Posts
               </NavLink>
             </li>
-            <li className="mr-3">
+            <li className="lg:mr-3">
               <NavLink
                 to="/project"
                 activeClassName="text-red-100 bg-pink-700"
-                className="inline-flex items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 Projects
               </NavLink>
             </li>
-            <li className="mr-3">
+            <li className="lg:mr-3">
               <NavLink
                 to="/about"
                 activeClassName="text-red-100 bg-pink-700"
-                className="inline-flex items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 About me!
               </NavLink>
