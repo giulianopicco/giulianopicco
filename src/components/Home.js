@@ -361,7 +361,12 @@ const Home = () => {
                 <img src={svgEmail} alt="" srcset="" />
               </div>
             </div>
-            <form name="contact" method="POST" data-netlify="true">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify-recaptcha="true"
+              data-netlify="true"
+            >
               <div>
                 <span class="uppercase text-sm text-gray-300 font-bold">
                   Full Name
@@ -393,7 +398,7 @@ const Home = () => {
                 ></textarea>
               </div>
               <div class="mt-8">
-                <input type="hidden" name="form-name" value="contact" />
+                <div data-netlify-recaptcha="true"></div>
               </div>
               <div class="mt-8">
                 {/* <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
