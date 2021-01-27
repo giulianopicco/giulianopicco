@@ -362,11 +362,13 @@ const Home = () => {
               </div>
             </div>
             <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <span class="uppercase text-sm text-gray-300 font-bold">
-                  Full Name
+                  Name
                 </span>
                 <input
+                  id="standard-basic"
                   class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="text"
                   name="name"
@@ -378,6 +380,7 @@ const Home = () => {
                   Email
                 </span>
                 <input
+                  id="standard-basic"
                   class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   type="email"
                   name="email"
@@ -388,6 +391,7 @@ const Home = () => {
                   Message
                 </span>
                 <textarea
+                  id="standard-basic"
                   name="message"
                   class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 ></textarea>
