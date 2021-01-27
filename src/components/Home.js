@@ -232,7 +232,7 @@ const Home = () => {
       </section>
 
       <section class="relative z-30 bg-color1 py-8">
-        <div class="container mx-auto flex flex-wrap lg:flex-nowrap pt-4 pb-12 px-8 xl:px-32 gap-10">
+        <div class="container mx-auto flex flex-wrap lg:flex-nowrap pt-4 pb-12 px-8 xl:px-32">
           {/* <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
             Title
           </h1>
@@ -263,7 +263,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink my-10 md:my-0 md:ml-10 lg:mx-10">
             <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
@@ -287,7 +287,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:mt-10 lg:mt-0">
             <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
@@ -361,12 +361,7 @@ const Home = () => {
                 <img src={svgEmail} alt="" srcset="" />
               </div>
             </div>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify-recaptcha="true"
-              data-netlify="true"
-            >
+            <form name="contact" method="POST" data-netlify="true">
               <div>
                 <span class="uppercase text-sm text-gray-300 font-bold">
                   Full Name
@@ -396,9 +391,6 @@ const Home = () => {
                   name="message"
                   class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 ></textarea>
-              </div>
-              <div class="mt-8">
-                <div data-netlify-recaptcha="true"></div>
               </div>
               <div class="mt-8">
                 {/* <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
