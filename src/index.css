@@ -94,7 +94,7 @@ body {
 .bg-neo-color1 {
   border-radius: 6px;
   /* background: #011761; */
-  background: #011b6f;
+  background: #011c74;
   box-shadow: 4px 4px 9px #010c31, -4px -4px 9px #022392;
 }
 .bg-neo-color2 {
@@ -112,7 +112,7 @@ body {
 }
 
 .bg-glass-white {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);

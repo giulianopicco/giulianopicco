@@ -6,9 +6,9 @@
   }
   @return unquote($value);
 }
-$shadows-small: multiple-box-shadow(1400);
-$shadows-medium: multiple-box-shadow(400);
-$shadows-big: multiple-box-shadow(200);
+$shadows-small: multiple-box-shadow(1050);
+$shadows-medium: multiple-box-shadow(300);
+$shadows-big: multiple-box-shadow(150);
 
 .stars {
   width: 2px;
@@ -58,8 +58,8 @@ $shadows-big: multiple-box-shadow(200);
 }
 
 .stars3 {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 2px;
   background: transparent;
   box-shadow: $shadows-big;
@@ -69,8 +69,8 @@ $shadows-big: multiple-box-shadow(200);
     content: " ";
     position: absolute;
     top: 100vh;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 2px;
     background: transparent;
     box-shadow: $shadows-big;

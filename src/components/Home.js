@@ -6,11 +6,11 @@ import imgProfile from "../assets/profilecolorpng.png";
 import svgWeb from "../assets/programming.svg";
 import svgMobile from "../assets/mobilepink.svg";
 import svgScrumBoard from "../assets/scrum_pink.svg";
-import svgEmail from "../assets/email.svg";
 
 import { motion } from "framer-motion";
 import TypeIt from "typeit-react";
 import classes from "./Home.module.scss";
+import ContactForm from "./ContactForm";
 
 const Home = () => {
   const contactForm = useRef();
@@ -57,7 +57,7 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 4 }}
+            transition={{ delay: 5.5 }}
             className={classes.scrollDiv}
           >
             <svg
@@ -350,65 +350,7 @@ const Home = () => {
             <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
           </div> */}
 
-          <div class="max-w-screen-xl mt-20 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-6 md:mx-auto bg-glass-color1 text-gray-200 rounded-lg shadow-lg">
-            <div class="flex flex-col justify-between">
-              <div>
-                <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
-                  Let's talk about everything!
-                </h2>
-              </div>
-              <div class="mt-6 text-center p-6">
-                <img src={svgEmail} alt="" srcset="" />
-              </div>
-            </div>
-            <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
-              <div>
-                <span class="uppercase text-sm text-gray-300 font-bold">
-                  Name
-                </span>
-                <input
-                  id="standard-basic"
-                  class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                  type="text"
-                  name="name"
-                  placeholder=""
-                />
-              </div>
-              <div class="mt-8">
-                <span class="uppercase text-sm text-gray-300 font-bold">
-                  Email
-                </span>
-                <input
-                  id="standard-basic"
-                  class="w-full bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                  type="email"
-                  name="email"
-                />
-              </div>
-              <div class="mt-8">
-                <span class="uppercase text-sm text-gray-300 font-bold">
-                  Message
-                </span>
-                <textarea
-                  id="standard-basic"
-                  name="message"
-                  class="w-full h-32 bg-glass-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                ></textarea>
-              </div>
-              <div class="mt-8">
-                {/* <button class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                  Send Message
-                </button> */}
-                <button
-                  type="submit"
-                  class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                >
-                  Send Message!
-                </button>
-              </div>
-            </form>
-          </div>
+          <ContactForm />
 
           {/* <h3 class="my-4 text-3xl text-white leading-tight">
             Main Hero Message to sell yourself!
