@@ -133,7 +133,6 @@ const ContactForm = () => {
             <div class="flex justify-center mt-8 items-center font-medium py-4 px-2 bg-white rounded-md text-green-700 bg-green-100 border border-green-300 ">
               <div slot="avatar">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   width="100%"
                   height="100%"
                   fill="none"
@@ -154,7 +153,6 @@ const ContactForm = () => {
               <div class="flex flex-auto flex-row-reverse" onClick={closeAlert}>
                 <div>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     width="100%"
                     height="100%"
                     fill="none"
