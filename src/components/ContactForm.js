@@ -62,7 +62,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div class="max-w-screen-xl mt-20 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-4 md:mx-auto bg-glass-color1 text-gray-200 rounded-lg shadow-lg">
+    <div
+      id="contactForm"
+      class="max-w-screen-xl mt-20 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-4 md:mx-auto bg-glass-color1 text-gray-200 rounded-lg shadow-lg"
+    >
       <div class="flex flex-col justify-between">
         <div>
           <h2 class="text-4xl lg:text-5xl font-bold leading-tight">

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -65,8 +67,9 @@ const SinglePost = () => {
           />
         </header>
         <div className="px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-gray-200">
-          <BlockContent
-            blocks={singlePost.body}
+          <ReactMarkdown
+            plugins={[gfm]}
+            children={singlePost.body}
             projectId="wkgbu7ay"
             dataset="production"
           />

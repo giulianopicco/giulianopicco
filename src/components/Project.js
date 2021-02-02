@@ -1,8 +1,14 @@
 import Reactm, { useState, useEffect } from "react";
 import sanityClient from "../client";
+import imageUrlBuilder from "@sanity/image-url";
 
 const Project = () => {
   const [projects, setProjects] = useState(null);
+
+  const builder = imageUrlBuilder(sanityClient);
+  function urlFor(source) {
+    return builder.image(source);
+  }
 
   useEffect(() => {
     sanityClient
@@ -11,6 +17,7 @@ const Project = () => {
           title,
           date,
           place,
+          "images":imagesGallery[].asset->{_id, url},
           description,
           projectType,
           link,
@@ -22,19 +29,19 @@ const Project = () => {
   }, []);
 
   return (
-    <main className="bg-indigo-200 min-h-screen px-3 pt-12 lg:p-12 lg:mt-28">
+    <main className="bg-color1 min-h-screen p-4 lg:p-12 mt-14 lg:mt-28">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive text-color1">
+        <h1 className="text-3xl lg:text-5xl text-gray-200 flex justify-center cursive">
           {" "}
           My Projects
         </h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
+        <h2 className="text-lg text-white flex justify-center mb-12">
           Welcome to my projects page!
         </h2>
         <section className="grid lg:grid-cols-2 gap-8">
           {projects &&
             projects.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-16">
+              <article className="relative rounded-lg shadow-xl bg-white p-8 md:p-10 lg:p-16">
                 <h3 className="text-color1 text-3xl font-bold mb-2 hover:text-red-700">
                   <a href={project.link} alt={project.title} target="_blank">
                     {project.title}
@@ -59,6 +66,20 @@ const Project = () => {
                     {" "}
                     {project.description}
                   </p>
+
+                  {project.images && (
+                    <div className="flex flex-row">
+                      {project.images.map((img) => (
+                        <img
+                          src={img.url}
+                          alt={img.title}
+                          className=""
+                          style={{ width: "100px", height: "auto" }}
+                        />
+                      ))}
+                    </div>
+                  )}
+
                   <a
                     href={project.link}
                     rel="noopener noreferrer"

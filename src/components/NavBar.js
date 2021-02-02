@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import classes from "./NavBar.module.css";
 
 import logo from "../assets/logo-white.svg";
 
-const NavBar = () => {
+const NavBar = ({ scrollToContact }) => {
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navBarStyles = "fixed w-full z-50 top-0 text-white";
@@ -44,16 +46,23 @@ const NavBar = () => {
       // click NOT on the menu
       if (checkParent(target, navMenu.current)) {
         // click on the link
-        if (navMenuDiv.current.classList.contains("hidden")) {
+        if (!menuOpen) {
           navMenuDiv.current.classList.remove("hidden");
+          setMenuOpen(true);
         } else {
           navMenuDiv.current.classList.add("hidden");
+          setMenuOpen(false);
         }
       } else {
         // click both outside link and outside menu, hide menu
         navMenuDiv.current.classList.add("hidden");
         navMenu.current.childNodes[0].classList.remove(classes.open);
+        setMenuOpen(false);
       }
+    } else {
+      navMenuDiv.current.classList.add("hidden");
+      navMenu.current.childNodes[0].classList.remove(classes.open);
+      setMenuOpen(false);
     }
   }
   function checkParent(t, elm) {
@@ -159,32 +168,29 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-          <button
-            id="navAction"
-            className={
-              !scrolled ? navBarActionButton : navBarActionButtonScrolled
-            }
-          >
-            Contact Me
-          </button>
+          {location.pathname === "/" ? (
+            <button
+              onClick={scrollToContact}
+              id="navAction"
+              className={
+                !scrolled ? navBarActionButton : navBarActionButtonScrolled
+              }
+            >
+              Contact Me
+            </button>
+          ) : (
+            <div
+              className={
+                !scrolled ? navBarActionButton : navBarActionButtonScrolled
+              }
+              style={{ display: "inline-block" }}
+            >
+              <NavLink to="/" exact id="navAction">
+                Go to Home
+              </NavLink>
+            </div>
+          )}
         </div>
-        {/* <div className="inline-flex py-3 px-3 my-6">
-          {" "}
-          <SocialIcon
-            url="https://github.com/giulianopicco"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
-          />
-          <SocialIcon
-            url="https://www.linkedin.com/in/max-giuliano-picco-432572171/"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
-          />
-        </div> */}
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>

@@ -9,9 +9,25 @@ import Post from "./components/Post";
 import Project from "./components/Project";
 
 function App() {
+  const scrollToContact = () => {
+    // window.scrollTo(0, document.body.scrollHeight);
+    console.log(window.scrollY);
+    console.log(
+      document.getElementById("contactForm").getBoundingClientRect().top
+    );
+    const top =
+      window.scrollY +
+      document.getElementById("contactForm").getBoundingClientRect().top;
+    window.scrollTo({
+      // top: document.body.scrollHeight,
+      top: top,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar scrollToContact={scrollToContact} />
       <Switch>
         <Route component={Home} path="/" exact></Route>
         <Route component={About} path="/about"></Route>

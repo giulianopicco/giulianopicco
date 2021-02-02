@@ -3,6 +3,9 @@
 @import "assets/main.css";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
 
+* {
+  font-family: "JetBrains Mono", cursive;
+}
 .cursive {
   font-family: "JetBrains Mono", cursive;
   font-weight: 700;

@@ -273,7 +273,7 @@ const Home = () => {
                   Projects.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
-                  Here you can see my personal porfolio.
+                  Here you can see my personal portfolio.
                 </p>
               </a>
             </div>
