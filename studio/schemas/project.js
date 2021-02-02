@@ -20,6 +20,12 @@ export default {
       type: "text",
     },
     {
+      name: "imagesGallery",
+      title: "Images gallery",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
       name: "projectType",
       tile: "Project Type",
       type: "string",
