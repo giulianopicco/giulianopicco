@@ -4,11 +4,16 @@ import { SocialIcon } from "react-social-icons";
 import classes from "./NavBar.module.css";
 
 import logo from "../assets/logo-white.svg";
+import logoAnimated from "../assets/logo-white-loading-animated.svg";
+
+import { motion } from "framer-motion";
 
 const NavBar = ({ scrollToContact }) => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hoverLogo, setHoverLogo] = useState(false);
+  let hoverOnLogoDelay;
 
   const navBarStyles = "fixed w-full z-50 top-0 text-white";
   const navBarStylesScrolled = "fixed w-full z-50 top-0 text-white gradient";
@@ -101,7 +106,24 @@ const NavBar = ({ scrollToContact }) => {
             activeClassName="text-white"
             className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           >
-            <img src={logo} alt="logo" className={classes.logo} width="80" />
+            <motion.img
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.5 },
+                src: { logoAnimated },
+              }}
+              onHoverStart={() =>
+                (hoverOnLogoDelay = setTimeout(() => setHoverLogo(true), 500))
+              }
+              onHoverEnd={() => {
+                setHoverLogo(false);
+                window.clearTimeout(hoverOnLogoDelay);
+              }}
+              src={!hoverLogo ? logo : logoAnimated}
+              alt="logo"
+              className={classes.logo}
+              width="80"
+            />
           </NavLink>
         </div>
         <div className="block lg:hidden pr-4">
@@ -144,7 +166,7 @@ const NavBar = ({ scrollToContact }) => {
               <NavLink
                 to="/post"
                 activeClassName="text-red-100 bg-pink-700"
-                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex font-bold justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 Blog Posts
               </NavLink>
@@ -153,7 +175,7 @@ const NavBar = ({ scrollToContact }) => {
               <NavLink
                 to="/project"
                 activeClassName="text-red-100 bg-pink-700"
-                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex font-bold justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 Projects
               </NavLink>
@@ -162,7 +184,7 @@ const NavBar = ({ scrollToContact }) => {
               <NavLink
                 to="/about"
                 activeClassName="text-red-100 bg-pink-700"
-                className="flex justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
+                className="flex font-bold justify-center items-center py-3 px-3 my-6 rounded text-white no-underline hover:text-indigo-200 hover:text-underline"
               >
                 About me!
               </NavLink>

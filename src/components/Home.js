@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import image from "../bg-cosmos.jpg";
-import imgProfile from "../assets/profilecolorpng.png";
+import imgProfile from "../assets/profilepic.png";
 import svgWeb from "../assets/programming.svg";
 import svgMobile from "../assets/mobilepink.svg";
 import svgScrumBoard from "../assets/scrum_pink.svg";
@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 import TypeIt from "typeit-react";
 import classes from "./Home.module.scss";
 import ContactForm from "./ContactForm";
+
+import FadeInWhenVisible from "./ui/FadeInWhenVisible";
 
 const Home = () => {
   const contactForm = useRef();
@@ -157,77 +159,84 @@ const Home = () => {
           <div class="w-full mb-4">
             <div class="h-1 mx-auto bg-gray-200 w-64 opacity-50 my-0 py-0 rounded-t"></div>
           </div>
-          <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12">
-                Frontend & Backend Technologies
-              </h3>
-              <p class="text-gray-300">
-                <ul>
-                  <li>Good taste on UI & UX affairs</li>
-                  <li>JS frameworks (Angular, React)</li>
-                  <li>Headless CMS, JAM Stack.</li>
-                  <li>API design and development of RESTful Services.</li>
-                  <li>Django, Node JS, and PHP.</li>
-                </ul>
-                <br />
-                <br />
-              </p>
-            </div>
-            <div class="w-full sm:w-1/2 p-6">
-              <img
-                src={svgWeb}
-                className="w-5/6 sm:h-64 mx-auto"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
-          <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
-              <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
-            </div>
-            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
-              <div class="align-middle">
-                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
-                  Mobile Development
+          <FadeInWhenVisible>
+            <div class="flex flex-wrap">
+              <div class="w-5/6 sm:w-1/2 p-6">
+                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12">
+                  Frontend & Backend Technologies
                 </h3>
                 <p class="text-gray-300">
                   <ul>
-                    <li>Native Android experience.</li>
-                    <li>
-                      Mobile hybrid Development (Ionic, React Native, Flutter).
-                    </li>
-                    <li>
-                      SOLID principles, mobile design patterns (MVVM, BLoC).
-                    </li>
+                    <li>Good taste on UI & UX affairs</li>
+                    <li>JS frameworks (Angular, React)</li>
+                    <li>Headless CMS, JAM Stack.</li>
+                    <li>API design and development of RESTful Services.</li>
+                    <li>Django, Node JS, and PHP.</li>
                   </ul>
                   <br />
                   <br />
                 </p>
               </div>
+              <div class="w-full sm:w-1/2 p-6">
+                <img
+                  src={svgWeb}
+                  className="w-5/6 sm:h-64 mx-auto"
+                  alt=""
+                  srcset=""
+                />
+              </div>
             </div>
-          </div>
-          <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6 lg:mt-6">
-              <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
-                Agile methodologies
-              </h3>
-              <p class="text-gray-300">
-                <ul>
-                  <li>SCRUM</li>
-                  <li>Kanban</li>
-                  <li>Jira</li>
-                  <li>PROficient Git user</li>
-                </ul>
-                <br />
-                <br />
-              </p>
+          </FadeInWhenVisible>
+          <FadeInWhenVisible delay={1}>
+            <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
+                <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
+              </div>
+              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
+                <div class="align-middle">
+                  <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
+                    Mobile Development
+                  </h3>
+                  <p class="text-gray-300">
+                    <ul>
+                      <li>Native Android experience.</li>
+                      <li>
+                        Mobile hybrid Development (Ionic, React Native,
+                        Flutter).
+                      </li>
+                      <li>
+                        SOLID principles, mobile design patterns (MVVM, BLoC).
+                      </li>
+                    </ul>
+                    <br />
+                    <br />
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="w-full sm:w-1/2 p-6 lg:mt-6">
-              <img src={svgScrumBoard} alt="" srcset="" />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible delay={1}>
+            <div class="flex flex-wrap">
+              <div class="w-5/6 sm:w-1/2 p-6 lg:mt-6">
+                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
+                  Agile methodologies
+                </h3>
+                <p class="text-gray-300">
+                  <ul>
+                    <li>SCRUM</li>
+                    <li>Kanban</li>
+                    <li>Jira</li>
+                    <li>PROficient Git user</li>
+                  </ul>
+                  <br />
+                  <br />
+                </p>
+              </div>
+              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
+                <img src={svgScrumBoard} alt="" srcset="" />
+              </div>
             </div>
-          </div>
+          </FadeInWhenVisible>
         </div>
       </section>
 
@@ -245,7 +254,7 @@ const Home = () => {
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   Personal Blogs.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
@@ -269,7 +278,7 @@ const Home = () => {
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   Projects.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">
@@ -293,7 +302,7 @@ const Home = () => {
                 href="#"
                 class="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full font-bold text-xl text-gray-200 px-6 pt-6">
+                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   About me.
                 </div>
                 <p class="text-gray-200 text-base px-6 mb-5">

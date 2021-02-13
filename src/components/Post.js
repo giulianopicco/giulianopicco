@@ -13,6 +13,7 @@ const Post = () => {
         `*[_type == "post"]{
         title,
         slug,
+        categories,
         mainImage{
           asset->{
             _id,
@@ -27,7 +28,7 @@ const Post = () => {
         setIsLoading(false);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [posts]);
 
   return (
     <main className="bg-color1 min-h-screen p-4 lg:p-12 mt-14 lg:mt-28">
@@ -41,7 +42,7 @@ const Post = () => {
         {isLoading ? (
           <LoadingLogo />
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-col-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {posts &&
               posts.map((post, index) => (
                 <article>
