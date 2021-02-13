@@ -2,10 +2,21 @@
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"); */
 @import "assets/main.css";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 * {
+  font-family: "Open Sans", sans-serif;
+}
+.heading,
+h1,
+h2,
+h3,
+.heading > *,
+h1 > *,
+h2 > *,
+h3 > * {
   font-family: "JetBrains Mono", cursive;
 }
+
 .cursive {
   font-family: "JetBrains Mono", cursive;
   font-weight: 700;
@@ -120,4 +131,16 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
+}
+
+/* UI components */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
