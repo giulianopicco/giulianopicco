@@ -1,0 +1,13 @@
+.blockContent blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  font-style: italic;
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: var(--color2);
+}
+
+.blockContent a {
+  color: #f472b6;
+}

@@ -187,7 +187,7 @@ const Home = () => {
               </div>
             </div>
           </FadeInWhenVisible>
-          <FadeInWhenVisible delay={1}>
+          <FadeInWhenVisible delay={0.5}>
             <div class="flex flex-wrap flex-col-reverse sm:flex-row">
               <div class="w-full sm:w-1/2 p-6 lg:mt-6">
                 <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
@@ -215,7 +215,7 @@ const Home = () => {
               </div>
             </div>
           </FadeInWhenVisible>
-          <FadeInWhenVisible delay={1}>
+          <FadeInWhenVisible delay={0.5}>
             <div class="flex flex-wrap">
               <div class="w-5/6 sm:w-1/2 p-6 lg:mt-6">
                 <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">

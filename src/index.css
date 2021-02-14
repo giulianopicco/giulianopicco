@@ -144,3 +144,7 @@ select {
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
 }
+
+code > * {
+  font-family: "JetBrains Mono", cursive;
+}

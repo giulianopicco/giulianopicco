@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import classes from "./SinglePost.module.css";
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
-import BlockContent from "@sanity/block-content-to-react";
-import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm";
+import PortableText from "./blockContent/PortableText";
+// import BlockContent from "@sanity/block-content-to-react";
+// import ReactMarkdown from "react-markdown";
+// import gfm from "remark-gfm";
 
 import LoadingLogo from "./LoadingLogo";
 
@@ -70,10 +72,22 @@ const SinglePost = () => {
               style={{ height: "400px" }}
             />
           </header>
-          <div className="px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-gray-200">
-            <ReactMarkdown
+
+          <div
+            className={[
+              classes.blockContent,
+              "px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-gray-200",
+            ].join(" ")}
+          >
+            {/* <ReactMarkdown
               plugins={[gfm]}
               children={singlePost.body}
+              projectId="wkgbu7ay"
+              dataset="production"
+            /> */}
+            <PortableText
+              className="hello"
+              blocks={singlePost.body}
               projectId="wkgbu7ay"
               dataset="production"
             />

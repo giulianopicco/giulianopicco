@@ -10,7 +10,7 @@ const Posts = () => {
   const [author, setAuthor] = useState(null);
   const [filteredPosts, setFilteredPosts] = useState(null);
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -49,14 +49,14 @@ const Posts = () => {
           .reduce((postsAcumulator, currenPost) =>
             postsAcumulator.concat(currenPost)
           );
-        setCategories(["all", ...new Set(_categories)]);
+        setCategories(["All", ...new Set(_categories)]);
       })
       .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
     console.log(selectedCategory);
-    if (selectedCategory === "all") {
+    if (selectedCategory === "All") {
       setFilteredPosts(posts);
     } else {
       setFilteredPosts(
@@ -66,7 +66,7 @@ const Posts = () => {
   }, [selectedCategory]);
 
   return (
-    <main className="bg-color1 min-h-screen lg:p-12 mt-14 lg:mt-28">
+    <main className="bg-color1 min-h-screen lg:p-12 mt-14 pt-4 lg:mt-28">
       <section className="container mx-auto">
         <h1 className="text-3xl lg:text-5xl text-gray-200 flex justify-center cursive">
           Blog Posts Page
@@ -77,11 +77,11 @@ const Posts = () => {
         {isLoading ? (
           <LoadingLogo />
         ) : (
-          <div className="px-6 py-8">
+          <div className="px-6 pb-8 lg:py-8">
             <div className="flex justify-between container mx-auto">
               <div className="w-full lg:w-8/12">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-xl font-bold text-gray-200 md:text-2xl">
+                  <h1 className="hidden lg:block text-xl font-bold text-gray-200 md:text-2xl">
                     Posts
                   </h1>
                   {/* <div>
@@ -122,13 +122,13 @@ const Posts = () => {
                             alt={post.mainImage.alt}
                             className="w-full max-w-4xl h-80 rounded-r object-cover "
                           />
-                          <div className="px-10 py-6">
+                          <div className="px-6 md:px-10 py-6">
                             <div className="flex justify-between items-center">
                               <span className="font-light text-gray-600">
                                 {post.publishedAt &&
                                   new Date(
                                     post.publishedAt
-                                  ).toLocaleTimeString()}
+                                  ).toLocaleDateString()}
                               </span>
                               <div className="grid grid-flow-col gap-2">
                                 {post.categories &&
@@ -261,17 +261,17 @@ const Posts = () => {
                             key={category}
                             className={index > 0 ? "mt-2" : ""}
                           >
-                            <a
+                            <p
                               href="#"
                               onClick={() => setSelectedCategory(category)}
                               className={
                                 selectedCategory === category
-                                  ? "text-pink-700 font-bold mx-1 hover:text-gray-600 hover:underline"
-                                  : "text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline"
+                                  ? "text-pink-700 cursor-pointer font-bold mx-1 hover:text-gray-600 hover:underline"
+                                  : "text-gray-700 cursor-pointer font-bold mx-1 hover:text-gray-600 hover:underline"
                               }
                             >
                               - {category}
-                            </a>
+                            </p>
                           </li>
                         ))}
                     </ul>
