@@ -68,5 +68,8 @@ export default {
       type: "code",
       title: "Code block",
     },
+    {
+      type: "youtube",
+    },
   ],
 };
