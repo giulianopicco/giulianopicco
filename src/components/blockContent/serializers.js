@@ -10,7 +10,7 @@ const serializers = {
       const { code, language, highlightedLines } = node;
       if (!code) return null;
       return (
-        <div className="my-4">
+        <div className="border-l-4 border-pink-700 rounded my-4">
           <SyntaxHighlighter
             // wrapLongLines
             showLineNumbers

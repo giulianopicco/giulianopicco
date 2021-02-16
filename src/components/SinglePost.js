@@ -42,11 +42,11 @@ const SinglePost = () => {
   }, [slug]);
 
   return (
-    <main className="bg-color1 min-h-screen px-4 pt-4 lg:p-12 mt-14 lg:mt-28">
+    <main className="bg-color1 min-h-screen mt-14 lg:mt-28">
       {!singlePost ? (
-        <LoadingLogo />
+        <LoadingLogo className="mt-4" />
       ) : (
-        <article className="container shadow-lg mx-auto bg-indigo-900 rounded-lg">
+        <article className="container mx-auto">
           <header className="relative">
             <div className="absolute h-full w-full items-center justify-center p-3 lg:p-8">
               <div className="bg-pink-200 bg-opacity-75 rounded p-3 lg:p-12">
@@ -68,7 +68,7 @@ const SinglePost = () => {
             <img
               src={singlePost.mainImage.asset.url}
               alt={singlePost.title}
-              className="w-full object-cover rounded-t"
+              className="w-full object-cover"
               style={{ height: "400px" }}
             />
           </header>

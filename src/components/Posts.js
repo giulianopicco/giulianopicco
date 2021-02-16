@@ -77,7 +77,7 @@ const Posts = () => {
         {isLoading ? (
           <LoadingLogo />
         ) : (
-          <div className="px-6 pb-8 lg:py-8">
+          <div className="px-4 md:px-6 pb-8 lg:py-8">
             <div className="flex justify-between container mx-auto">
               <div className="w-full lg:w-8/12">
                 <div className="flex items-center justify-between">
@@ -116,7 +116,7 @@ const Posts = () => {
                   filteredPosts.map((post, index) => (
                     <AnimateSharedLayout>
                       <motion.div layout key={post.id} className="mt-8">
-                        <div className="max-w-4xl bg-white rounded-lg shadow-md border-l-8 border-indigo-500">
+                        <div className="max-w-4xl bg-white rounded-lg shadow-md border-l-4 md:border-l-8 border-indigo-500">
                           <img
                             src={post.mainImage.asset.url}
                             alt={post.mainImage.alt}
@@ -226,7 +226,7 @@ const Posts = () => {
                   <h1 className="mb-4 text-xl font-bold text-gray-200">
                     Authors
                   </h1>
-                  <div className="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md border-l-8 border-pink-700">
+                  <div className="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md md:border-l-6 lg:border-l-8 border-pink-700">
                     <ul className="-mx-4">
                       <li className="flex items-center">
                         <img
@@ -253,7 +253,7 @@ const Posts = () => {
                   <h1 className="mb-4 text-xl font-bold text-gray-200">
                     Categories
                   </h1>
-                  <div className="flex flex-col bg-white px-4 py-6 max-w-sm mx-auto rounded-lg shadow-md border-l-8 border-pink-700">
+                  <div className="flex flex-col bg-white px-4 py-6 max-w-sm mx-auto rounded-lg shadow-md md:border-l-6 lg:border-l-8 border-pink-700">
                     <ul>
                       {categories &&
                         categories.map((category, index) => (
