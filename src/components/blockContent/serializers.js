@@ -3,6 +3,8 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import dark from "react-syntax-highlighter/dist/esm/styles/hljs/androidstudio";
 
 import Youtube from "./Youtube";
+import Codepen from "./Codepen";
+import Python from "./PythonTrinket";
 
 const serializers = {
   types: {
@@ -23,6 +25,8 @@ const serializers = {
       );
     },
     youtube: Youtube,
+    codepen: Codepen,
+    python: Python,
   },
 };
 

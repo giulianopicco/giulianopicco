@@ -11,6 +11,8 @@ import post from "./post";
 import project from "./project";
 import author from "./author";
 import youtube from "./youtube";
+import codepen from "./codepen";
+import python from "./python";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +31,7 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     youtube,
+    codepen,
+    python,
   ]),
 });

@@ -71,5 +71,11 @@ export default {
     {
       type: "youtube",
     },
+    {
+      type: "codepen",
+    },
+    {
+      type: "python",
+    },
   ],
 };
