@@ -98,13 +98,6 @@ body {
   color: var(--color2);
 }
 
-.bg-glass-color1 {
-  background: rgba(1, 23, 97, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-}
 .bg-neo-color1 {
   border-radius: 6px;
   /* background: #011761; */
@@ -115,6 +108,21 @@ body {
   border-radius: 47px;
   background: #860c35;
   box-shadow: 23px 23px 46px #6f0a2c, -23px -23px 46px #9d0e3e;
+}
+
+.bg-glass-color1 {
+  background: rgba(1, 23, 97, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.bg-glass-color1-strong {
+  background: rgba(1, 23, 97, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.47);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
 }
 
 .bg-glass-color2 {
@@ -147,4 +155,28 @@ select {
 
 code > * {
   font-family: "JetBrains Mono", cursive;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+pre::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #022085;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #860c35a1;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #860c35cc;
 }

@@ -5,6 +5,7 @@ const LoadingLogo = () => {
   return (
     <img
       src={loadingLogo}
+      className="animate-pulse"
       style={{
         width: "200px",
         margin: "auto",

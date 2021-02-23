@@ -89,7 +89,7 @@ const Home = () => {
                   ></rect>
                 </g>
                 <circle
-                  class="circle"
+                  className="circle"
                   id="Ellipse_1"
                   data-name="Ellipse 1"
                   cx="11"
@@ -114,9 +114,9 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* <div class="sticky bottom-0 -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
-        {/* <div class="relative -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
-        <div class="absolute bottom-0 w-full">
+        {/* <div className="sticky bottom-0 -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
+        {/* <div className="relative -mt-15 sm:-mt-24 md:-mt-28 lg:-mt-36 xl:-mt-96"> */}
+        <div className="absolute bottom-0 w-full">
           <svg viewBox="0 0 1428 174" version="1.1">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g
@@ -151,21 +151,21 @@ const Home = () => {
         </div>
       </section>
       {/* <section className="relative h-screen bg-color1 z-30"> */}
-      <section class="relative z-30 bg-color1 py-8">
-        <div class="container max-w-5xl mx-auto m-8">
-          <h1 class="w-full my-2 text-3xl lg:text-5xl font-bold leading-tight text-center text-gray-200">
+      <section className="relative z-30 bg-color1 py-8">
+        <div className="container max-w-5xl mx-auto m-8">
+          <h1 className="w-full my-2 text-3xl lg:text-5xl font-bold leading-tight text-center text-gray-200">
             Full Stack Web & Mobile Developer
           </h1>
-          <div class="w-full mb-4">
-            <div class="h-1 mx-auto bg-gray-200 w-64 opacity-50 my-0 py-0 rounded-t"></div>
+          <div className="w-full mb-4">
+            <div className="h-1 mx-auto bg-gray-200 w-64 opacity-50 my-0 py-0 rounded-t"></div>
           </div>
           <FadeInWhenVisible>
-            <div class="flex flex-wrap">
-              <div class="w-5/6 sm:w-1/2 p-6">
-                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12">
+            <div className="flex flex-wrap">
+              <div className="w-5/6 sm:w-1/2 p-6">
+                <h3 className="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12">
                   Frontend & Backend Technologies
                 </h3>
-                <p class="text-gray-300">
+                <p className="text-gray-300">
                   <ul>
                     <li>Good taste on UI & UX affairs</li>
                     <li>JS frameworks (Angular, React)</li>
@@ -177,7 +177,7 @@ const Home = () => {
                   <br />
                 </p>
               </div>
-              <div class="w-full sm:w-1/2 p-6">
+              <div className="w-full sm:w-1/2 p-6">
                 <img
                   src={svgWeb}
                   className="w-5/6 sm:h-64 mx-auto"
@@ -187,17 +187,17 @@ const Home = () => {
               </div>
             </div>
           </FadeInWhenVisible>
-          <FadeInWhenVisible delay={0.5}>
-            <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
+          <FadeInWhenVisible>
+            <div className="flex flex-wrap flex-col-reverse sm:flex-row">
+              <div className="w-full sm:w-1/2 p-6 lg:mt-6">
                 <img src={svgMobile} className="w-5/6 sm:h-64 mx-auto" alt="" />
               </div>
-              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
-                <div class="align-middle">
-                  <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
+              <div className="w-full sm:w-1/2 p-6 lg:mt-6">
+                <div className="align-middle">
+                  <h3 className="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
                     Mobile Development
                   </h3>
-                  <p class="text-gray-300">
+                  <p className="text-gray-300">
                     <ul>
                       <li>Native Android experience.</li>
                       <li>
@@ -215,13 +215,13 @@ const Home = () => {
               </div>
             </div>
           </FadeInWhenVisible>
-          <FadeInWhenVisible delay={0.5}>
-            <div class="flex flex-wrap">
-              <div class="w-5/6 sm:w-1/2 p-6 lg:mt-6">
-                <h3 class="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
+          <FadeInWhenVisible>
+            <div className="flex flex-wrap">
+              <div className="w-5/6 sm:w-1/2 p-6 lg:mt-6">
+                <h3 className="text-2xl lg:text-3xl text-gray-200 font-bold leading-none mb-3 mt-12 lg:mt-0">
                   Agile methodologies
                 </h3>
-                <p class="text-gray-300">
+                <p className="text-gray-300">
                   <ul>
                     <li>SCRUM</li>
                     <li>Kanban</li>
@@ -232,7 +232,7 @@ const Home = () => {
                   <br />
                 </p>
               </div>
-              <div class="w-full sm:w-1/2 p-6 lg:mt-6">
+              <div className="w-full sm:w-1/2 p-6 lg:mt-6">
                 <img src={svgScrumBoard} alt="" srcset="" />
               </div>
             </div>
@@ -240,80 +240,80 @@ const Home = () => {
         </div>
       </section>
 
-      <section class="relative z-30 bg-color1 py-8">
-        <div class="container mx-auto flex flex-wrap lg:flex-nowrap pt-4 pb-12 px-8 xl:px-32">
-          {/* <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
+      <section className="relative z-30 bg-color1 py-8">
+        <div className="container mx-auto flex flex-wrap lg:flex-nowrap pt-4 pb-12 px-8 xl:px-32">
+          {/* <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">
             Title
           </h1>
-          <div class="w-full mb-4">
-            <div class="h-1 mx-auto bg-indigo-50 w-64 opacity-50 my-0 py-0 rounded-t"></div>
+          <div className="w-full mb-4">
+            <div className="h-1 mx-auto bg-indigo-50 w-64 opacity-50 my-0 py-0 rounded-t"></div>
           </div> */}
-          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
-            <div class="flex-1 no-outline rounded-t rounded-b-none overflow-hidden">
+          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink">
+            <div className="flex-1 no-outline rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
-                class="flex flex-wrap no-underline hover:no-underline"
+                className="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
+                <div className="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   Personal Blogs.
                 </div>
-                <p class="text-gray-200 text-base px-6 mb-5">
+                <p className="text-gray-200 text-base px-6 mb-5">
                   Here I post some articles about the tech Industry.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden p-6">
-              <div class="flex items-center justify-center lg:justify-start">
+            <div className="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden p-6">
+              <div className="flex items-center justify-center lg:justify-start">
                 <Link to={`/post/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button className="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink my-10 md:my-0 md:ml-10 lg:mx-10">
-            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink my-10 md:my-0 md:ml-10 lg:mx-10">
+            <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
-                class="flex flex-wrap no-underline hover:no-underline"
+                className="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
+                <div className="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   Projects.
                 </div>
-                <p class="text-gray-200 text-base px-6 mb-5">
+                <p className="text-gray-200 text-base px-6 mb-5">
                   Here you can see my personal portfolio.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
-              <div class="flex items-center justify-center">
+            <div className="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
+              <div className="flex items-center justify-center">
                 <Link to={`/project/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button className="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:mt-10 lg:mt-0">
-            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:mt-10 lg:mt-0">
+            <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
-                class="flex flex-wrap no-underline hover:no-underline"
+                className="flex flex-wrap no-underline hover:no-underline"
               >
-                <div class="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
+                <div className="w-full heading font-bold text-xl text-gray-200 px-6 pt-6">
                   About me.
                 </div>
-                <p class="text-gray-200 text-base px-6 mb-5">
+                <p className="text-gray-200 text-base px-6 mb-5">
                   If you want to know a bit more about me and get in touch.
                 </p>
               </a>
             </div>
-            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
-              <div class="flex items-center justify-center lg:justify-end">
+            <div className="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
+              <div className="flex items-center justify-center lg:justify-end">
                 <Link to={`/about/`}>
-                  <button class="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button className="mx-auto lg:mx-0 hover:underline gradient-neo text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See more
                   </button>
                 </Link>
@@ -325,10 +325,10 @@ const Home = () => {
 
       {/* Footer */}
       <section className="gradient">
-        <svg class="wave-top" viewBox="0 0 1439 147" version="1.1">
+        <svg className="wave-top" viewBox="0 0 1439 147" version="1.1">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-              <g class="wave" fill="#011761">
+              <g className="wave" fill="#011761">
                 <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
               </g>
               <g transform="translate(1.000000, 15.000000)" fill="#860c35">
@@ -350,18 +350,21 @@ const Home = () => {
             </g>
           </g>
         </svg>
-        <section ref={contactForm} class="container mx-auto text-center py-6">
-          {/* <h1 class="w-full my-2 text-4xl lg:text-5xl font-bold leading-tight text-center text-white">
+        <section
+          ref={contactForm}
+          className="container mx-auto text-center py-6"
+        >
+          {/* <h1 className="w-full my-2 text-4xl lg:text-5xl font-bold leading-tight text-center text-white">
             Contact Form
           </h1>
 
-          <div class="w-full mb-4">
-            <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+          <div className="w-full mb-4">
+            <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
           </div> */}
 
           <ContactForm />
 
-          {/* <h3 class="my-4 text-3xl text-white leading-tight">
+          {/* <h3 className="my-4 text-3xl text-white leading-tight">
             Main Hero Message to sell yourself!
           </h3> */}
         </section>

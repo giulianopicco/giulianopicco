@@ -8,6 +8,8 @@ import PortableText from "./blockContent/PortableText";
 // import ReactMarkdown from "react-markdown";
 // import gfm from "remark-gfm";
 
+import Codepen from "./blockContent/Codepen";
+
 import LoadingLogo from "./LoadingLogo";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -44,7 +46,9 @@ const SinglePost = () => {
   return (
     <main className="bg-color1 min-h-screen mt-14 lg:mt-28">
       {!singlePost ? (
-        <LoadingLogo className="mt-4" />
+        <div className="pt-8">
+          <LoadingLogo />
+        </div>
       ) : (
         <article className="container mx-auto">
           <header className="relative">
