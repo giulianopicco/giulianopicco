@@ -13,6 +13,7 @@ import author from "./author";
 import youtube from "./youtube";
 import codepen from "./codepen";
 import python from "./python";
+import datacamp from "./datacamp";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +34,6 @@ export default createSchema({
     youtube,
     codepen,
     python,
+    datacamp,
   ]),
 });

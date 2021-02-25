@@ -5,6 +5,7 @@ import dark from "react-syntax-highlighter/dist/esm/styles/hljs/androidstudio";
 import Youtube from "./Youtube";
 import Codepen from "./Codepen";
 import Python from "./PythonTrinket";
+import Datacamp from "./Datacamp";
 
 const serializers = {
   types: {
@@ -27,6 +28,7 @@ const serializers = {
     youtube: Youtube,
     codepen: Codepen,
     python: Python,
+    datacamp: Datacamp,
   },
 };
 

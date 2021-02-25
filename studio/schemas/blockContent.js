@@ -77,5 +77,8 @@ export default {
     {
       type: "python",
     },
+    {
+      type: "datacamp",
+    },
   ],
 };

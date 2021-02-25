@@ -12,6 +12,7 @@ const Codepen = ({ node }) => {
           user={user}
           height={height || "300"}
           preview={false}
+          defaultTab="result"
         />
       </div>
     );
