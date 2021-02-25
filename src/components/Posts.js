@@ -120,7 +120,7 @@ const Posts = () => {
                           <img
                             src={post.mainImage.asset.url}
                             alt={post.mainImage.alt}
-                            className="w-full max-w-4xl h-80 rounded-r object-cover "
+                            className="w-full max-w-4xl h-80 rounded-tr object-cover "
                           />
                           <div className="px-6 md:px-10 py-6">
                             <div className="flex justify-between items-center">

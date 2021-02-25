@@ -47,7 +47,7 @@ const About = () => {
             <img
               src={urlFor(author.authorImage).url()}
               alt={author.name}
-              className="w-32 h-32 lg:w-64 lg:h-64 mr-8 rounded-full self-center ring-4 ring-gray-200"
+              className="w-32 h-32 lg:w-64 lg:h-64 lg:mr-8 rounded-full self-center ring-4 ring-gray-200"
             />
             <div className="text-lg flex flex-col justify-center mt-8 lg:mt-auto">
               <h1 className="cursive text-3xl lg:text-6xl text-pink-400 mb-4">
