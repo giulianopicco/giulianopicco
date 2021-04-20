@@ -27,6 +27,8 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       fuchsia: colors.fuchsia,
+      primary: "#011761",
+      secondary: "#860c35",
     },
     spacing: {
       px: "1px",
@@ -64,6 +66,9 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      "1/3": "33.33333%",
+      "2/3": "66.66667%",
+      "9/16": "56.25%",
     },
     animation: {
       none: "none",

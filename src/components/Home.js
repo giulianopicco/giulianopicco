@@ -2,12 +2,13 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import image from "../bg-cosmos.jpg";
+// import image from "../assets/background/cosmos1.jpg";
 import imgProfile from "../assets/profilepic.png";
 import svgWeb from "../assets/programming.svg";
 import svgMobile from "../assets/mobilepink.svg";
 import svgScrumBoard from "../assets/scrum_pink.svg";
 
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import TypeIt from "typeit-react";
 import classes from "./Home.module.scss";
 import ContactForm from "./ContactForm";
@@ -21,10 +22,16 @@ const Home = () => {
     window.scrollTo(contactForm.current);
   };
 
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
+
   return (
     <main>
-      <section className="h-screen relative">
+      <section className="h-screen relative overflow-hidden">
         <motion.img
+          style={{ scale: scale }}
+          initial={{ scale: 1 }}
+          // animate={{ width: "100%" }}
           src={image}
           alt="cosmos background image"
           className="absolute object-cover w-full h-full"

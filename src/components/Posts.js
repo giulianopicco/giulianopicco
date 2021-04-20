@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import LoadingLogo from "./LoadingLogo";
+import TextTruncate from "react-text-truncate";
 
 import { motion, AnimateSharedLayout } from "framer-motion";
 
@@ -117,11 +118,15 @@ const Posts = () => {
                     <AnimateSharedLayout>
                       <motion.div layout key={post.id} className="mt-8">
                         <div className="max-w-4xl bg-white rounded-lg shadow-md border-l-4 md:border-l-8 border-indigo-500">
-                          <img
-                            src={post.mainImage.asset.url}
-                            alt={post.mainImage.alt}
-                            className="w-full max-w-4xl h-80 rounded-tr object-cover "
-                          />
+                          {/* TODO check image dimension */}
+                          <div className="image-wrapper relative h-0 pb-9/16">
+                            <img
+                              src={post.mainImage.asset.url}
+                              alt={post.mainImage.alt}
+                              // className="w-full max-w-4xl h-80 rounded-tr object-cover "
+                              className="absolute w-full h-full inset-0 object-cover rounded-tr"
+                            />
+                          </div>
                           <div className="px-6 md:px-10 py-6">
                             <div className="flex justify-between items-center">
                               <span className="font-light text-gray-600">
@@ -153,7 +158,12 @@ const Posts = () => {
                                 </h3>
                               </Link>
                               <p className="mt-2 text-gray-600">
-                                {post.description}
+                                <TextTruncate
+                                  line={4}
+                                  element="span"
+                                  truncateText="…"
+                                  text={post.description}
+                                />
                               </p>
                             </div>
                             <div className="flex justify-between items-center mt-4">

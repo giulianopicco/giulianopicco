@@ -8,9 +8,13 @@ import PortableText from "./blockContent/PortableText";
 // import ReactMarkdown from "react-markdown";
 // import gfm from "remark-gfm";
 
-import Codepen from "./blockContent/Codepen";
-
 import LoadingLogo from "./LoadingLogo";
+import {
+  motion,
+  useViewportScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -20,6 +24,13 @@ function urlFor(source) {
 const SinglePost = () => {
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
+
+  const [isComplete, setIsComplete] = useState(false);
+  const { scrollYProgress } = useViewportScroll();
+  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+
+  useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
 
   useEffect(() => {
     sanityClient
@@ -54,7 +65,7 @@ const SinglePost = () => {
           <header className="relative">
             <div className="absolute h-full w-full items-center justify-center p-3 lg:p-8">
               <div className="bg-pink-200 bg-opacity-75 rounded p-3 lg:p-12">
-                <h1 class="cursive text-3xl lg:text-5xl mb-4">
+                <h1 class="cursive text-2xl lg:text-5xl mb-4">
                   {singlePost.title}
                 </h1>
                 <div className="flex justify-center text-gray-800">
@@ -77,12 +88,62 @@ const SinglePost = () => {
             />
           </header>
 
+          {/* <svg className="progress-icon fixed w-40" viewBox="0 0 60 60"> */}
+          <svg className="progress-icon fixed" viewBox="0 0 60 60">
+            {/* <motion.path
+              fill="none"
+              strokeWidth="5"
+              stroke="white"
+              strokeDasharray="0 1"
+              d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+              style={{
+                pathLength,
+                rotate: 90,
+                translateX: 5,
+                translateY: 5,
+                scaleX: -1, // Reverse direction of line animation
+              }}
+            /> */}
+            <motion.path
+              fill="none"
+              strokeWidth="1"
+              stroke="white"
+              // x1="0"
+              // y1="0"
+              // x2="20"
+              // y2="0"
+              // strokeDasharray="0 0"
+              // d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+              d="M 0 0, h 10"
+              style={{
+                pathLength,
+                // rotate: 90,
+                // translateX: 5,
+                // translateY: 5,
+                // scaleX: -1, // Reverse direction of line animation
+              }}
+            />
+            {/* <motion.path
+              fill="none"
+              strokeWidth="5"
+              stroke="white"
+              d="M14,26 L 22,33 L 35,16"
+              initial={false}
+              strokeDasharray="0 1"
+              animate={{ pathLength: isComplete ? 1 : 0 }}
+            /> */}
+          </svg>
+
           <div
             className={[
               classes.blockContent,
               "px-5 md:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-gray-200",
             ].join(" ")}
           >
+            <motion.path
+              d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+              style={{ pathLength: scrollYProgress }}
+            />
             {/* <ReactMarkdown
               plugins={[gfm]}
               children={singlePost.body}
