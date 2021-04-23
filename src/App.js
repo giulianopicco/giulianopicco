@@ -15,7 +15,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 
 function App() {
   useEffect(() => {
-    ReactGa.initialize("G-Q5HY0YMKK9");
+    ReactGa.initialize("UA-195290073-1");
     // report page view
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
