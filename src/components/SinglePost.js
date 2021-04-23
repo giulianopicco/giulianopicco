@@ -88,52 +88,6 @@ const SinglePost = () => {
             />
           </header>
 
-          {/* <svg className="progress-icon fixed w-40" viewBox="0 0 60 60"> */}
-          <svg className="progress-icon fixed" viewBox="0 0 60 60">
-            {/* <motion.path
-              fill="none"
-              strokeWidth="5"
-              stroke="white"
-              strokeDasharray="0 1"
-              d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-              style={{
-                pathLength,
-                rotate: 90,
-                translateX: 5,
-                translateY: 5,
-                scaleX: -1, // Reverse direction of line animation
-              }}
-            /> */}
-            <motion.path
-              fill="none"
-              strokeWidth="1"
-              stroke="white"
-              // x1="0"
-              // y1="0"
-              // x2="20"
-              // y2="0"
-              // strokeDasharray="0 0"
-              // d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-              d="M 0 0, h 10"
-              style={{
-                pathLength,
-                // rotate: 90,
-                // translateX: 5,
-                // translateY: 5,
-                // scaleX: -1, // Reverse direction of line animation
-              }}
-            />
-            {/* <motion.path
-              fill="none"
-              strokeWidth="5"
-              stroke="white"
-              d="M14,26 L 22,33 L 35,16"
-              initial={false}
-              strokeDasharray="0 1"
-              animate={{ pathLength: isComplete ? 1 : 0 }}
-            /> */}
-          </svg>
-
           <div
             className={[
               classes.blockContent,
