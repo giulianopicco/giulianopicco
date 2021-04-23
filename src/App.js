@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { useEffect } from "react";
 
 import Navbar from "./components/NavBar";
 import Home from "./components/Home";
@@ -8,9 +9,17 @@ import SinglePost from "./components/SinglePost";
 import Post from "./components/Posts";
 import Project from "./components/Project";
 
+import ReactGa from "react-ga";
+
 import ScrollToTop from "./components/ui/ScrollToTop";
 
 function App() {
+  useEffect(() => {
+    ReactGa.initialize("G-Q5HY0YMKK9");
+    // report page view
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   const scrollToContact = () => {
     // window.scrollTo(0, document.body.scrollHeight);
     console.log(window.scrollY);
