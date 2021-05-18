@@ -131,14 +131,14 @@ const Project = () => {
                       class="px-4 row-start-3 row-end-6 col-start-1 col-end-2 md:col-start-4 md:col-end-6 md:row-start-1 md:row-end-2 md:self-center"
                     >
                       <div class="bg-glass-white-strong p-6 rounded-lg shadow-lg">
-                        <div class="flex items-baseline">
+                        {/* <div class="flex items-baseline">
                           <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                             New
                           </span>
                           <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
                             2 baths &bull; 3 rooms
                           </div>
-                        </div>
+                        </div> */}
 
                         <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
                           {project.title}
