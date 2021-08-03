@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
-import image from "../assets/img/bg-cosmos.jpg";
+import image from "../assets/img/bg-cosmos.webp";
 // import image from "../assets/background/cosmos1.jpg";
-import imgProfile from "../assets/img/profilepic.png";
+import imgProfile from "../assets/img/profilepic.webp";
 import svgWeb from "../assets/programming.svg";
 import svgMobile from "../assets/mobilepink.svg";
 import svgScrumBoard from "../assets/scrum_pink.svg";

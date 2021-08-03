@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client";
-import image from "../assets/img/bg-cosmos.jpg";
+import image from "../assets/img/bg-cosmos.webp";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
