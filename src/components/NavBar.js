@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
 import classes from "./NavBar.module.css";
 
 import logo from "../assets/logo-white.svg";
@@ -8,10 +7,8 @@ import logoAnimated from "../assets/logo-white-loading-animated.svg";
 
 import {
   motion,
-  useViewportScroll,
-  useSpring,
-  useTransform,
 } from "framer-motion";
+import ScrollProgressBar from "./ui/ScrollProgressBar";
 
 const variantsMobile = {
   open: {
@@ -32,11 +29,7 @@ const NavBar = ({ scrollToContact }) => {
   const [hoverLogo, setHoverLogo] = useState(false);
   let hoverOnLogoDelay;
 
-  // Viewport scroll progress
-  const { scrollYProgress } = useViewportScroll();
-  // const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
-  const yRange = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+  
 
   const navBarStyles = "fixed w-full z-50 top-0 text-white";
   const navBarStylesScrolled = "fixed w-full z-50 top-0 text-white gradient";
@@ -258,22 +251,7 @@ const NavBar = ({ scrollToContact }) => {
         </motion.div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
-      <svg
-        className="progress-icon fixed w-full rounded"
-        viewBox="0 0 100 1"
-        opacity="0.5"
-      >
-        <motion.path
-          fill="none"
-          strokeWidth="2"
-          stroke="white"
-          d="M 0 0, h 100"
-          style={{
-            pathLength,
-          }}
-          transition={{ ease: "easeInOut" }}
-        />
-      </svg>
+      <ScrollProgressBar/>
     </nav>
   );
 };
