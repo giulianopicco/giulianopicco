@@ -12,6 +12,7 @@ import Project from "./components/Project";
 import ReactGa from "react-ga";
 
 import ScrollToTop from "./components/ui/ScrollToTop";
+import Page404 from "./components/Page404";
 
 function App() {
   useEffect(() => {
@@ -42,10 +43,12 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route component={Home} path="/" exact></Route>
+          <Route component={Page404} path="/post/404"></Route>
           <Route component={SinglePost} path="/post/:slug"></Route>
           <Route component={Post} path="/post"></Route>
           <Route component={Project} path="/project"></Route>
           <Route component={About} path="/about"></Route>
+          <Route component={Page404} path="*"></Route>
         </Switch>
       </ScrollToTop>
     </BrowserRouter>

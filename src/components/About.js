@@ -42,7 +42,7 @@ const About = () => {
         <div className={classes.stars}></div>
         <div className={classes.stars2}></div>
         <div className={classes.stars3}></div>
-        <div className="p-3 pt-16 lg:p-14 lg:pt-48 container mx-auto relative">
+        <div className="p-3 pt-16 md:mt-4 lg:p-14 lg:pt-48 container mx-auto relative">
           <section className="bg-glass-color1-strong rounded-lg shadow-2xl flex flex-col lg:flex-row p-8 lg:p-20">
             <img
               src={urlFor(author.authorImage).url()}
