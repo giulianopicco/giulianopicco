@@ -40,11 +40,12 @@ const SinglePost = () => {
       "name": author->name,
       "authorImage": author->image
     }`
-    const response = await sanityClient.fetch(query)
-    if (!response.length) {
+    const [data] = await sanityClient.fetch(query)
+    if (!data) {
+      history.goBack()
       history.push('404')
     } else {
-      setSinglePost(response.data)
+      setSinglePost(data)
     }
   }
 

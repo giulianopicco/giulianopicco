@@ -8,6 +8,14 @@ export default {
       type: "string",
     },
     {
+      name: "backgroundImage",
+      title: "Background image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "date",
       type: "datetime",
     },

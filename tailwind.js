@@ -2,9 +2,12 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: [],
-  presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    brightness: {
+      25: '.25',
+      175: '1.75',
+    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -605,6 +608,7 @@ module.exports = {
       90: ".9",
       95: ".95",
       100: "1",
+      101: "1.01",
       105: "1.05",
       110: "1.1",
       125: "1.25",
@@ -754,6 +758,7 @@ module.exports = {
     "disabled",
   ],
   variants: {
+    brightness: ['hover', 'focus'],
     accessibility: ["responsive", "focus-within", "focus"],
     alignContent: ["responsive"],
     alignItems: ["responsive"],
