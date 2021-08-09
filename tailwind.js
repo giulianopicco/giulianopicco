@@ -739,6 +739,7 @@ module.exports = {
       30: "30",
       40: "40",
       50: "50",
+      100: "100",
     },
   },
   variantOrder: [
@@ -917,7 +918,7 @@ module.exports = {
     translate: ["responsive", "hover", "focus"],
     userSelect: ["responsive"],
     verticalAlign: ["responsive"],
-    visibility: ["responsive"],
+    visibility: ["responsive", "hover"],
     whitespace: ["responsive"],
     width: ["responsive"],
     wordBreak: ["responsive"],
