@@ -51,7 +51,7 @@ const Slider = ({modalImages}) => {
 
   return (
     <>
-      <AnimatePresence class="slider" initial={false} custom={direction}>
+      <AnimatePresence className="slider" initial={false} custom={direction}>
         <motion.img
           className="rounded-2xl absolute max-w-2xl lg:max-w-6xl max-h-screen"
           key={page}

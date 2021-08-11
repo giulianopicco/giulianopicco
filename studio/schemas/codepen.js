@@ -6,7 +6,7 @@ const Preview = ({ value }) => {
   const { url, height } = value;
   if (url != null) {
     const [, , , user, , hash] = url.split("/");
-    return <CodepenEmbed hash={hash} user={user} height={height || "300"} />;
+    return <CodepenEmbed hash={hash} user={user} height={height || "600"} />;
   }
   return null;
 };

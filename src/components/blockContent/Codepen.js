@@ -10,7 +10,7 @@ const Codepen = ({ node }) => {
         <CodepenEmbed
           hash={hash}
           user={user}
-          height={height || "300"}
+          height={height || "600"}
           preview={false}
           defaultTab="result"
         />
