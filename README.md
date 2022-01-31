@@ -37,14 +37,6 @@
 <br />
 <br />
 
----
-
-<details>
-  <summary>:zap: GitHub Stats</summary>
-
-  <img align="left" alt="codeSTACKr's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=giulianopicco&show_icons=true&hide_border=true" />
-
-</details>
 
 [website]: https://giulianopicco.com
 [linkedin]: https://www.linkedin.com/in/max-giuliano-picco-432572171/
