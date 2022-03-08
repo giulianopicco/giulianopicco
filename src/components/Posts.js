@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import LoadingLogo from "./LoadingLogo";
 import TextTruncate from "react-text-truncate";
 
 import { motion, AnimateSharedLayout } from "framer-motion";
+import { gsap } from "gsap";
 
 const Posts = () => {
   const [posts, setPosts] = useState(null);
@@ -14,6 +15,44 @@ const Posts = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [isLoading, setIsLoading] = useState(true);
 
+  // let screen = useRef(null);
+  let body = useRef(null);
+
+  useEffect(() => {
+    // Page transition
+    const tl2 = gsap.timeline();
+    tl2.to('.transition li', {
+      duration: 0,
+      scaleY: 0,
+      // transformOrigin: "bottom  left",
+    })
+    tl2.to('.transition li', {
+      duration: 0.5,
+      scaleY: 1,
+      transformOrigin: "top  left",
+      stagger: 0.2,
+    })
+    tl2.to('.transition li', {
+      duration: 0.5,
+      scaleY: 0,
+      transformOrigin: "bottom  left",
+      stagger: 0.1,
+      delay: 0.1
+    })
+    // tl2.set(screen, { left: "-100%" });
+    // TweenMax.to(body, .3, {css: {
+    //   opacity: "1",
+    //   pointerEvents: "auto",
+    //   ease: Power4.easeInOut
+    // }}).delay(2);
+    return () => {
+      gsap.to(body, {duration: 1,
+        opacity: "0",
+        pointerEvents: 'none'
+      });
+    }
+  });
+  
   useEffect(() => {
     sanityClient
       .fetch(
@@ -67,8 +106,17 @@ const Posts = () => {
   }, [selectedCategory]);
 
   return (
-    <main className="bg-color1 min-h-screen lg:p-12 mt-14 pt-4 lg:mt-28">
-      <section className="container mx-auto">
+    <>
+    <ul className="transition">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    <main data-barba="container" className="bg-color1 min-h-screen lg:p-12 mt-14 pt-4 lg:mt-28">
+      <section className="container mx-auto" ref={(el) => (body = el)}>
         <h1 className="text-3xl lg:text-5xl text-gray-200 flex justify-center cursive">
           Blog Posts Page
         </h1>
@@ -334,6 +382,7 @@ const Posts = () => {
         )}
       </section>
     </main>
+    </>
   );
 };
 

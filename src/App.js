@@ -49,12 +49,12 @@ function App() {
         <BrowserRouter>
           <Navbar scrollToContact={scrollToContact} />
           <ScrollToTop>
-      <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)} >
+      <AnimatePresence data-barba="container" exitBeforeEnter onExitComplete={() => setShowModal(false)} >
             <Switch>
               <Route component={Home} path="/" exact></Route>
               <Route component={Page404} path="/post/404"></Route>
               <Route component={SinglePost} path="/post/:slug"></Route>
-              <Route component={Post} path="/post"></Route>
+              {/* <Route component={Post} path="/post"></Route> */}
               <Route render={(props) => <Project {...props} setShowModal={setShowModal} loadModal={loadModal} modalImages={modalImages}/>} path="/project"></Route>
               <Route component={About} path="/about"></Route>
               <Route component={Page404} path="*"></Route>

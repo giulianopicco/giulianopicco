@@ -198,7 +198,7 @@ const NavBar = ({ scrollToContact }) => {
                 Active
               </a>
             </li> */}
-            <li className="lg:mr-3">
+            {/* <li className="lg:mr-3">
               <NavLink
                 to="/post"
                 activeClassName="text-red-100 bg-pink-700"
@@ -206,7 +206,7 @@ const NavBar = ({ scrollToContact }) => {
               >
                 Blog Posts
               </NavLink>
-            </li>
+            </li> */}
             <li className="lg:mr-3">
               <NavLink
                 to="/project"

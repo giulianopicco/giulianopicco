@@ -72,8 +72,9 @@ const Project = ({setShowModal, loadModal}) => {
                       class="w-full h-52 md:h-80  object-cover object-center rounded-lg shadow-md row-start-1 row-end-4 col-start-1 col-end-2 md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-2"
                     /> */}
                     {project.backgroundImage?.asset?.url?.length > 0 ?
-                    <div
-                     className="w-full transform transition hover:scale-101 cursor-pointer rounded-lg shadow-md row-start-1 row-end-4 col-start-1 col-end-2 md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-2">
+                    <div onClick={(() => loadModal(project.images))}
+                    className="w-full transform transition hover:scale-101 cursor-pointer rounded-lg shadow-md row-start-1 row-end-4 col-start-1 col-end-2 md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-2 group">
+                    <p class="absolute invisible group-hover:visible p-8 max-w-3xl text-xl lg:text-8xl uppercase text-gray-800 mix-blend-color-burn overflow-hidden">Click to show Gallery</p>
                     <motion.img
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -82,7 +83,6 @@ const Project = ({setShowModal, loadModal}) => {
                       alt={project.title}
                       className="w-full object-cover object-center rounded-lg"
                       style={{ height: "400px" }}
-                      onClick={(() => loadModal(project.images))}
                     />
                     </div> :
                     <div class="h-full w-full shadow-md row-start-1 row-end-4 col-start-1 col-end-2 md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-2 rounded-xl bg-gray-200" ></div>

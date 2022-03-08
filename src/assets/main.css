@@ -678,6 +678,14 @@ video {
   visibility: hidden;
 }
 
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
 }
@@ -32336,6 +32344,14 @@ video {
     visibility: hidden;
   }
 
+  .group:hover .sm\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .sm\:group-hover\:invisible {
+    visibility: hidden;
+  }
+
   .sm\:static {
     position: static;
   }
@@ -63924,6 +63940,14 @@ video {
   }
 
   .md\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .group:hover .md\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .md\:group-hover\:invisible {
     visibility: hidden;
   }
 
@@ -95518,6 +95542,14 @@ video {
     visibility: hidden;
   }
 
+  .group:hover .lg\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .lg\:group-hover\:invisible {
+    visibility: hidden;
+  }
+
   .lg\:static {
     position: static;
   }
@@ -127109,6 +127141,14 @@ video {
     visibility: hidden;
   }
 
+  .group:hover .xl\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .xl\:group-hover\:invisible {
+    visibility: hidden;
+  }
+
   .xl\:static {
     position: static;
   }
@@ -158697,6 +158737,14 @@ video {
   }
 
   .\32xl\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .group:hover .\32xl\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .\32xl\:group-hover\:invisible {
     visibility: hidden;
   }
 

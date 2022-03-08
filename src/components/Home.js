@@ -279,7 +279,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink my-10 md:my-0 md:ml-10 lg:mx-10">
+          {/* <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink my-10 md:my-0 md:ml-10 lg:mx-10">
             <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
@@ -302,8 +302,9 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-          </div>
-          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:mt-10 lg:mt-0">
+          </div> */}
+          {/* <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:mt-10 lg:mt-0"> */}
+          <div className="w-full md:w-1/3 p-6 flex bg-neo-color1 flex-col flex-grow flex-shrink md:ml-10 mt-10 lg:mt-0">
             <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
