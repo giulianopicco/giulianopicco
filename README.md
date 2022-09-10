@@ -1,6 +1,6 @@
 ### Hi there, I'm Max - aka [Giulianopicco][website] 👋 
 
-[![Website](https://img.shields.io/website?label=codeSTACKr.com&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://giulianopicco.com)
+[![Website](https://raw.githubusercontent.com/giulianopicco/giulianopicco-portfolio/fb69e8259240273c61cfcfc5b8065334a2ca2147/src/assets/logo-white.svg?token=ACSMY5D73JHURCJ4WQFKOBLDDSOWY)](https://giulianopicco.com)
 
 ## I'm a Developer, and Data enthusiast!!
 
