@@ -9,7 +9,7 @@
 
 ### Connect with me:
 
-[<img align="left" alt="giulianopicco.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="giulianopicco.com" width="22px" src="https://raw.githubusercontent.com/giulianopicco/giulianopicco-portfolio/fb69e8259240273c61cfcfc5b8065334a2ca2147/src/assets/logo-white.svg?token=ACSMY5D73JHURCJ4WQFKOBLDDSOWY" />][website]
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
 <br />
