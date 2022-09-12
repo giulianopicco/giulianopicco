@@ -74,8 +74,6 @@ h3>* {
     --color1-darkest: hsl(221, 52%, 8%);
     --color1-lighter: hsl(221, 52%, 14%);
     --color2: #860c35;
-    --color2-darker: hsl(from var(--color2) h s calc(l - 5%));
-    --color2-lighter: hsl(from var(--color2) h s calc(l + 5%));
 }
 
 .gradient {
