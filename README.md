@@ -1,6 +1,5 @@
 ### Hi there, I'm Max - aka [Giulianopicco][website] 👋 
 
-[![Website](https://raw.githubusercontent.com/giulianopicco/giulianopicco-portfolio/fb69e8259240273c61cfcfc5b8065334a2ca2147/src/assets/logo-white.svg?token=ACSMY5D73JHURCJ4WQFKOBLDDSOWY)](https://giulianopicco.com)
 
 ## I'm a Developer, and Data enthusiast!!
 
